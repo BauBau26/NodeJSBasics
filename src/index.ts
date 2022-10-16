@@ -1,4 +1,15 @@
-const nico = {
+// What is a person? 🤔
+interface Person {
+  name: string;
+  age: number;
+  height: {
+    feet: number;
+    inches: number;
+  };
+}
+
+// make a person
+const nico: Person = {
   name: "nico",
   age: 26,
   height: {
@@ -6,7 +17,32 @@ const nico = {
     inches: 4,
   },
 };
-const inchesToCm = 2.54;
-const heightInCm =
-  nico.height.feet * 12 * inchesToCm + nico.height.inches * inchesToCm;
-console.log(heightInCm);
+
+const armand: Person = {
+  name: "armand",
+  age: 27,
+  height: {
+    feet: 5,
+    inches: 11,
+  },
+};
+
+// function to calculate height in cm from feet and inches
+function heightInCm(feet: number, inches: number) {
+  const inchesToCm = 2.54;
+  return feet * 12 * inchesToCm + inches * inchesToCm;
+}
+
+// function to calculate height in cm given a person
+function personHeightInCm(person: Person) {
+  const inchesToCm = 2.54;
+  return (
+    person.height.feet * 12 * inchesToCm + person.height.inches * inchesToCm
+  );
+}
+
+//const nicoHeight = heightInCm(nico.height.feet, nico.height.inches);
+const nicoHeight = personHeightInCm(nico);
+const armandHeight = personHeightInCm(armand);
+
+console.log(`nico: ${nicoHeight}, armand: ${armandHeight}`);
