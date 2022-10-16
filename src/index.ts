@@ -42,10 +42,14 @@ function personHeightInCm(person: Person) {
 }
 
 // find age difference between two people
-function ageDifference(person1: Person, person2: Person): number {}
+function ageDifference(person1: Person, person2: Person): number {
+  return person1.age - person2.age;
+}
 
 //const nicoHeight = heightInCm(nico.height.feet, nico.height.inches);
 const nicoHeight = personHeightInCm(nico);
 const armandHeight = personHeightInCm(armand);
+const ageDifferenceAN = ageDifference(nico, armand);
 
 console.log(`nico: ${nicoHeight}, armand: ${armandHeight}`);
+console.log(ageDifferenceAN);
