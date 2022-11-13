@@ -47,11 +47,14 @@ function ageDifference(person1: Person, person2: Person): number {
 }
 
 // function that takes a Person, and returns a description of them as a string.
+function personDescription(person: Person): string {
+  return `${person.name} is ${person.height.feet}ft${person.height.inches} and ${person.age} years old`;
+}
 
 //const nicoHeight = heightInCm(nico.height.feet, nico.height.inches);
 const nicoHeight = personHeightInCm(nico);
 const armandHeight = personHeightInCm(armand);
 const ageDifferenceAN = ageDifference(nico, armand);
+const nicoDescription = personDescription(armand);
 
-console.log(`nico: ${nicoHeight}, armand: ${armandHeight}`);
-console.log(ageDifferenceAN);
+console.log(nicoDescription);
