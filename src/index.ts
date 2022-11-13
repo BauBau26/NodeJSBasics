@@ -76,3 +76,11 @@ numberArray.forEach((theNumber) => {
 // 1) Remove all items that are smaller than 3
 // 2) log the description on each person
 // 3) Give me the height in cm for each person
+
+const boo = numberArray.filter((n) => {
+  // if smaller that 3 return false,
+  if (n < 3) {
+    return false;
+  }
+  return true;
+});
