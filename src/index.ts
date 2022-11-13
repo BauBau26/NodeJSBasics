@@ -53,9 +53,9 @@ function personDescription(person: Person): string {
 
 //// CODE TO RUN ////
 
-/// map: transform all values using function. Returns same number as started
-/// filter: remove some values based on a condition
-/// forEach: perform an action on every value in array
+// map: transform all values using function. Returns same number as started
+// filter: remove some values based on a condition
+// forEach: perform an action on every value in array
 
 const numberArray = [1, 4, 9, 11];
 
@@ -72,3 +72,7 @@ const filtered = numberArray.filter((theNumber) => {
 numberArray.forEach((theNumber) => {
   console.log(theNumber);
 });
+
+// 1) Remove all items that are smaller than 3
+// 2) log the description on each person
+// 3) Give me the height in cm for each person
