@@ -51,10 +51,24 @@ function personDescription(person: Person): string {
   return `${person.name} is ${person.height.feet}ft${person.height.inches} and ${person.age} years old`;
 }
 
-//const nicoHeight = heightInCm(nico.height.feet, nico.height.inches);
-const nicoHeight = personHeightInCm(nico);
-const armandHeight = personHeightInCm(armand);
-const ageDifferenceAN = ageDifference(nico, armand);
-const nicoDescription = personDescription(armand);
+//// CODE TO RUN ////
 
-console.log(nicoDescription);
+/// map: transform all values using function. Returns same number as started
+/// filter: remove some values based on a condition
+/// forEach: perform an action on every value in array
+
+const numberArray = [1, 4, 9, 11];
+
+const newNumbers = numberArray.map((oldNumber) => {
+  return oldNumber + 1;
+});
+
+const filtered = numberArray.filter((theNumber) => {
+  const isLarger = theNumber > 8;
+
+  return isLarger;
+});
+
+numberArray.forEach((theNumber) => {
+  console.log(theNumber);
+});
