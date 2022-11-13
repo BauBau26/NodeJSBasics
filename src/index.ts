@@ -46,6 +46,8 @@ function ageDifference(person1: Person, person2: Person): number {
   return person1.age - person2.age;
 }
 
+// function that takes a Person, and returns a description of them as a string.
+
 //const nicoHeight = heightInCm(nico.height.feet, nico.height.inches);
 const nicoHeight = personHeightInCm(nico);
 const armandHeight = personHeightInCm(armand);
