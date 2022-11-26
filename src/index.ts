@@ -73,6 +73,25 @@ numberArray.forEach((theNumber) => {
 
 // 1) Remove all items that are larger than 5
 // 2) log the description on each person
-// 3) Give me the height in cm for each person
+// 3) Give me the height in cm for each person in an array
 
 const numberArray = [1, 4, 9, 11];
+
+const filtered = numberArray.filter((a) => !(a > 5));
+
+// console log, description function, list of people
+
+const peopleList = [nico, armand];
+
+peopleList.forEach((person) => {
+  const description = personDescription(person);
+  console.log(description);
+});
+
+// height, height in cm, person, array
+
+const peopleList = [nico, armand];
+
+const peopleHeight = peopleList.map((person) =>
+  heightInCm(person.height.feet, person.height.inches)
+);
