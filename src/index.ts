@@ -51,6 +51,8 @@ function personDescription(person: Person): string {
   return `${person.name} is ${person.height.feet}ft${person.height.inches} and ${person.age} years old`;
 }
 
+// return true if a is equal to b or b is not equal to c
+
 //// CODE TO RUN ////
 
 // map: transform all values using function. Returns same number as started
@@ -60,27 +62,17 @@ function personDescription(person: Person): string {
 const numberArray = [1, 4, 9, 11];
 
 const newNumbers = numberArray.map((oldNumber) => {
-  return oldNumber + 1;
+  return 2 * oldNumber;
 });
 
-const filtered = numberArray.filter((theNumber) => {
-  const isLarger = theNumber > 8;
-
-  return isLarger;
-});
+const filtered = numberArray.filter((n) => n > 8);
 
 numberArray.forEach((theNumber) => {
   console.log(theNumber);
 });
 
-// 1) Remove all items that are smaller than 3
+// 1) Remove all items that are larger than 5
 // 2) log the description on each person
 // 3) Give me the height in cm for each person
 
-const boo = numberArray.filter((n) => {
-  // if smaller that 3 return false,
-  if (n < 3) {
-    return false;
-  }
-  return true;
-});
+const numberArray = [1, 4, 9, 11];
